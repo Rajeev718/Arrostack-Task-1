@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const cors=require('cors');
 const pool = require('./db');
 require('dotenv').config();
@@ -7,34 +8,19 @@ const jwt = require("jsonwebtoken");
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(
+    express.static(path.join(__dirname, "../frontend"), {
+        index: false
+    })
+);
 
-app.get('/',(req,res)=>{
-    res.send("Hello Rajeev");
-})
+app.get("/", (req, res) => {
+    res.sendFile(
+        path.join(__dirname, "../frontend/index.html")
+    );
+});
 
  
-const products = [
-  { id: 1, product: 'Laptop', price: 1000, quantity: 10 },
-  { id: 2, product: 'Mobile', price: 15000, quantity: 5 },
-  { id: 3, product: 'Tablet', price: 5000, quantity: 8 },
-  { id: 4, product: 'Headphones', price: 2000, quantity: 15 },
-  { id: 5, product: 'Smartwatch', price: 8000, quantity: 12 },
-];
-
-app.get('/api/products/:id',(req,res)=>{
-  const productId = Number(req.params.id);
-  const product = products.find(p => p.id === productId);
-  if (!product){
-    return res.status(404).json({
-      success:false, 
-      message: 'Product not found'
-    });
-  }
-  
-  res.json({
-     product
-  });
-});
 
 app.get("/api/db-test", async(req,res) =>{
    try{

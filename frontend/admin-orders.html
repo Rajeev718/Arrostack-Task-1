@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Orders Management</title>
+    <link rel="stylesheet" href="css/admin-orders.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <div>
+                <h1>Orders Management</h1>
+                <p>Manage all customer orders</p>
+            </div>
+
+            <button id="backButton">Back to Dashboard</button>
+        </header>
+
+        <section class="summary">
+            <div class="summary-card">
+                <h3>Total Orders</h3>
+                <p id="totalOrders">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Pending Orders</h3>
+                <p id="pendingOrders">0</p>
+            </div>
+        </section>
+
+        <section class="orders-section">
+
+            <div class="section-header">
+                <h2>All Orders</h2>
+                <button id="refreshOrders">Refresh</button>
+            </div>
+
+            <input
+                type="text"
+                id="orderSearch"
+                placeholder="Search by Order ID or Customer Name"
+            >
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="ordersBody">
+                        <tr>
+                            <td colspan="6">Loading orders...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="pageMessage"></p>
+
+        </section>
+
+    </div>
+
+    <script src="js/orders.js"></script>
+
+</body>
+</html>

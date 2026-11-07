@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - B2B Order Management</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <h2>Create Account</h2>
+        <p>Register to get started</p>
+
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <input type="password" id="password"
+                   placeholder="Password (minimum 8 characters)"
+                   minlength="8" required>
+
+           <button type="submit" id="registerButton">Register</button>
+        </form>
+
+        <p id="message"></p>
+
+        <p>Already have an account?
+            <a href="login.html">Login Here</a>
+        </p>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

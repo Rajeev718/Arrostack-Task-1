@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Portal | My Cart</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header class="cart-header">
+        <a href="products.html" class="brand">🛒 B2B Portal</a>
+        <a href="my-order-status.html">📦 My Orders</a>
+        <a href="products.html" class="back-link">← Continue Shopping</a>
+    </header>
+
+    <main class="cart-container">
+        <h1>My Shopping Cart 🛍️</h1>
+        <p class="subtitle">Review your products before placing the order.</p>
+
+        <div class="cart-layout">
+            <section class="cart-card">
+                <h2>Cart Items (<span id="cartCount">0</span>)</h2>
+                <div id="cartItems"></div>
+            </section>
+
+            <aside class="summary-card">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Total Items</span>
+                    <strong id="totalItems">0</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Total Amount</span>
+                    <strong id="totalAmount">₹0.00</strong>
+                </div>
+                <button id="placeOrderButton" disabled>Place Order</button>
+                <p id="cartMessage" role="status"></p>
+            </aside>
+        </div>
+    </main>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

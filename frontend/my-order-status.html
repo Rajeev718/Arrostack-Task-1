@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>B2B Portal | My Orders</title>
+
+    <link rel="stylesheet" href="css/my-order-status.css">
+</head>
+
+<body>
+
+    <header class="orders-header">
+        <a href="products.html" class="brand">
+            🛒 B2B Portal
+        </a>
+
+        <nav>
+            <a href="products.html">Products</a>
+            <a href="cart.html">My Cart</a>
+            <button id="logoutButton">Sign Out</button>
+        </nav>
+    </header>
+
+    <main class="orders-container">
+
+        <section class="orders-banner">
+            <div>
+                <p class="eyebrow">YOUR ACCOUNT</p>
+                <h1>My Orders 📦</h1>
+                <p>Track your orders and check their status.</p>
+            </div>
+        </section>
+
+        <section class="orders-summary">
+            <div class="summary-card">
+                <span>Total Orders</span>
+                <strong id="totalOrders">0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Pending Orders</span>
+                <strong id="pendingOrders">0</strong>
+            </div>
+
+            <div class="summary-card">
+                <span>Completed Orders</span>
+                <strong id="completedOrders">0</strong>
+            </div>
+        </section>
+
+        <section class="orders-list-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Order History</h2>
+                    <p>Your recent purchases</p>
+                </div>
+
+                <button id="refreshOrders">↻ Refresh</button>
+            </div>
+
+            <p id="ordersMessage" role="status" aria-live="polite">
+                Loading your orders...
+            </p>
+
+            <div id="ordersList"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 B2B Portal · Order Management System
+    </footer>
+
+    <script src="js/my-order-status.js"></script>
+
+</body>
+</html>

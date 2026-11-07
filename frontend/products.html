@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Products | B2B Portal</title>
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header class="shop-header">
+        <a href="dashboard.html" class="brand">🛒 B2B <span>Portal</span></a>
+
+        <input type="search" id="productSearch"
+            placeholder="Search products..." aria-label="Search products">
+
+        <div class="header-actions">
+            <span id="customerName">Welcome</span>
+            <a href="cart.html" class="cart-link">
+                🛍️ Cart <span id="cartCount">0</span>
+            </a>
+            <a href="my-order-status.html">📦 My Orders</a>
+            <button id="logoutButton">Logout</button>
+        </div>
+    </header>
+
+    <main class="shop-container">
+        <section class="shop-banner">
+            <div>
+                <p class="eyebrow">B2B BUSINESS STORE</p>
+                <h1>Find products for your business.</h1>
+                <p>Browse products, check availability and build your order.</p>
+            </div>
+            <span class="banner-emoji">📦</span>
+        </section>
+
+        <div class="section-heading">
+            <div>
+                <h2>Explore Products</h2>
+                <p>Choose products and quantities for your order.</p>
+            </div>
+            <span id="productCount">Loading products...</span>
+        </div>
+
+        <p id="message" role="status" aria-live="polite"></p>
+        <section id="productsGrid" class="products-grid">
+            <p>Loading products...</p>
+        </section>
+    </main>
+
+    <script src="js/products.js"></script>
+</body>
+</html>

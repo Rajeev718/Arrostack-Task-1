@@ -1,0 +1,72 @@
+
+/* Register Page */
+
+.auth-container {
+    width: 90%;
+    max-width: 420px;
+    margin: 70px auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.auth-container p {
+    color: #64748b;
+    margin: 15px 0;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+#registerForm input {
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+#registerForm input:focus {
+    border-color: #2563eb;
+}
+
+#registerForm button {
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#registerForm button:hover {
+    background: #1d4ed8;
+}
+
+.auth-container a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+#message {
+    font-size: 14px;
+}
